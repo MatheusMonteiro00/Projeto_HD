@@ -15,6 +15,7 @@
     --color-light: #f4f4f4;
     --color-dark: #222;
     --color-orange: #ff6600;
+    --color-orange-100: rgba(255, 102, 0, 0.4);
     --spacind-sm:10px;
     --spacind-md:30px;
 }
@@ -95,6 +96,49 @@ h1 {
 }
 
 section {
-    height: 100dvh;
+    min-height: 100dvh;
 }
 
+
+.btn {
+    border: 2px solid var(--color-orange);
+    background-color: var(--color-orange-100);
+    padding: var(--spacind-sm) var(--spacind-md);
+    border-radius: 100px;
+    transition: 0.5;
+
+    &:hover{
+        background-color: transparent;
+    }
+}
+
+.galeria {
+
+    padding: var(--spacind-md);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    h2  {
+        margin-bottom: var(--spacind-md);
+        font-size: 6vmin;
+    }
+    .grid-motos {
+        columns: 3 300px;
+    
+        img {
+            width: 100%;
+            margin-block: var(--spacind-sm);
+            border-radius: 8px;
+            opacity: .5;
+            filter: grayscale(1);
+            transition: .5s;
+            position: relative;
+
+            &:hover{
+                opacity: 1;
+                filter: grayscale(0);
+                scale: 1.1;
+                z-index:1;
+            }
+        }
+    }
+}
